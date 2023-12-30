@@ -13,18 +13,20 @@ const getRandomInt = (min: number, max: number) => {
 YUHbtn!.onclick = () => {
   kittyIMG!.srcset = `kitty${getRandomInt(1, 4)}.jpg`;
 
-  miau.play();
+  setTimeout(() => {
+    miau.play();
 
-  kittyIMG!.animate(
-    [
-      { transform: "scale(0)", opacity: 0 },
-      { opacity: 1 },
-      { opacity: 1 },
-      { transform: "scale(6)" },
-    ],
-    {
-      duration: 5000,
-      easing: "ease-out",
-    }
-  );
+    kittyIMG!.animate(
+      [
+        { transform: "scale(0)", opacity: 0 },
+        { opacity: 1 },
+        { opacity: 1 },
+        { transform: "scale(6)" },
+      ],
+      {
+        duration: 5000,
+        easing: "ease-out",
+      }
+    );
+  }, 500);
 };
