@@ -1,6 +1,5 @@
 const YUHbtn = document.querySelector<HTMLButtonElement>(".YUH");
 const kittyIMG = document.querySelector<HTMLImageElement>(".kitty");
-
 const miau: HTMLAudioElement = new Audio("Miau.mp3");
 miau.volume = 0.1;
 
@@ -15,7 +14,7 @@ YUHbtn!.onclick = () => {
 
   kittyIMG!.srcset = `kitty${getRandomInt(1, 4)}.jpg`;
 
-  setTimeout(() => {
+  kittyIMG!.onload = () => {
     miau.play();
 
     kittyIMG!.animate(
@@ -30,9 +29,9 @@ YUHbtn!.onclick = () => {
         easing: "ease-out",
       }
     );
-  }, 500);
 
-  setTimeout(() => {
-    YUHbtn!.disabled = false;
-  }, 5500);
+    setTimeout(() => {
+      YUHbtn!.disabled = false;
+    }, 5000);
+  };
 };
