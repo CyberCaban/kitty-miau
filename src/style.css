@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+#IMGOpacity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.kitty {
+  position: absolute;
+  transform: scale(0);
+  z-index: 2;
+  opacity: 0;
+}
+
+main {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.YUH {
+  width: calc(11.125 * 15px);
+  height: calc(15 * 15px);
+  font-size: 200px;
+  /* transform: scale(15); */
+  z-index: 1;
+  border: none;
+  background-color: unset;
+  cursor: pointer;
+  padding: 0;
+}
+
+.YUH:focus {
+  outline: none;
+}
