@@ -1,7 +1,7 @@
 const YUHbtn = document.querySelector<HTMLButtonElement>(".YUH");
 const kittyIMG = document.querySelector<HTMLImageElement>(".kitty");
 
-const miau: HTMLAudioElement = new Audio("./Miau.mp3");
+const miau: HTMLAudioElement = new Audio("Miau.mp3");
 miau.volume = 0.1;
 
 const getRandomInt = (min: number, max: number) => {
