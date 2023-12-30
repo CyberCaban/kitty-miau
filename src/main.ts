@@ -11,6 +11,8 @@ const getRandomInt = (min: number, max: number) => {
 };
 
 YUHbtn!.onclick = () => {
+  YUHbtn!.disabled = true;
+
   kittyIMG!.srcset = `kitty${getRandomInt(1, 4)}.jpg`;
 
   setTimeout(() => {
@@ -29,4 +31,8 @@ YUHbtn!.onclick = () => {
       }
     );
   }, 500);
+
+  setTimeout(() => {
+    YUHbtn!.disabled = false;
+  }, 5500);
 };

@@ -55,3 +55,7 @@ main {
 .YUH:focus {
   outline: none;
 }
+
+.YUH:disabled {
+  color: black;
+}
